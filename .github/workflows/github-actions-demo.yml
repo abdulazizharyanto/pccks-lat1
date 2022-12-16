@@ -10,7 +10,7 @@ jobs:
     - name: build and tag image
       #run: docker build . --file Dockerfile --tag m1lk/test-action-pccp:v1
       run: |
-        docker build -t dckr_pat_mCGLAzXxukVFeI_1Gzj-5v6fePM -f Dockerfile .
+        docker build -t abdulaziz77/m1lk:v1 -f Dockerfile .
 
     - name: push to dockerhub
-      run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_SECRET}} && docker push dckr_pat_mCGLAzXxukVFeI_1Gzj-5v6fePM
+      run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_SECRET}} && docker push abdulaziz77/m1lk:v1
